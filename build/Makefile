@@ -588,6 +588,19 @@ cgal-ashape/fast:
 .PHONY : cgal-ashape/fast
 
 #=============================================================================
+# Target rules for targets named corner
+
+# Build rule for target.
+corner: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 corner
+.PHONY : corner
+
+# fast build rule for target.
+corner/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corner.dir/build.make CMakeFiles/corner.dir/build
+.PHONY : corner/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -687,6 +700,30 @@ src/cgal-ashape.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cgal-ashape.dir/build.make CMakeFiles/cgal-ashape.dir/src/cgal-ashape.cpp.s
 .PHONY : src/cgal-ashape.cpp.s
 
+src/corner_point_detect.o: src/corner_point_detect.cpp.o
+.PHONY : src/corner_point_detect.o
+
+# target to build an object file
+src/corner_point_detect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corner.dir/build.make CMakeFiles/corner.dir/src/corner_point_detect.cpp.o
+.PHONY : src/corner_point_detect.cpp.o
+
+src/corner_point_detect.i: src/corner_point_detect.cpp.i
+.PHONY : src/corner_point_detect.i
+
+# target to preprocess a source file
+src/corner_point_detect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corner.dir/build.make CMakeFiles/corner.dir/src/corner_point_detect.cpp.i
+.PHONY : src/corner_point_detect.cpp.i
+
+src/corner_point_detect.s: src/corner_point_detect.cpp.s
+.PHONY : src/corner_point_detect.s
+
+# target to generate assembly for a file
+src/corner_point_detect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corner.dir/build.make CMakeFiles/corner.dir/src/corner_point_detect.cpp.s
+.PHONY : src/corner_point_detect.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -732,6 +769,7 @@ help:
 	@echo "... tests"
 	@echo "... PointCloudBoundaryDetection"
 	@echo "... cgal-ashape"
+	@echo "... corner"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -742,6 +780,9 @@ help:
 	@echo "... src/cgal-ashape.o"
 	@echo "... src/cgal-ashape.i"
 	@echo "... src/cgal-ashape.s"
+	@echo "... src/corner_point_detect.o"
+	@echo "... src/corner_point_detect.i"
+	@echo "... src/corner_point_detect.s"
 .PHONY : help
 
 

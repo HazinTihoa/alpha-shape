@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(CGAL REQUIRED COMPONENTS Core)
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
+find_package(OpenCV REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
@@ -21,6 +22,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS}
 )
+include_directories(${OpenCV_INCLUDE_DIRS})
 
 # 链接库
 link_directories(${PCL_LIBRARY_DIRS})
@@ -43,3 +45,6 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable(cgal-ashape src/cgal-ashape.cpp)
 target_link_libraries(cgal-ashape ${PCL_LIBRARIES} ${CGAL_LIBRARIES})
+
+add_executable(corner src/corner_point_detect.cpp)
+target_link_libraries(corner ${PCL_LIBRARIES} ${OpenCV_LIBS})

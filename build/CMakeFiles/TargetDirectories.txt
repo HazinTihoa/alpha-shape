@@ -30,6 +30,7 @@
 /home/tzh/a-shape/build/CMakeFiles/geometry_msgs_generate_messages_py.dir
 /home/tzh/a-shape/build/CMakeFiles/PointCloudBoundaryDetection.dir
 /home/tzh/a-shape/build/CMakeFiles/cgal-ashape.dir
+/home/tzh/a-shape/build/CMakeFiles/corner.dir
 /home/tzh/a-shape/build/CMakeFiles/test.dir
 /home/tzh/a-shape/build/CMakeFiles/edit_cache.dir
 /home/tzh/a-shape/build/CMakeFiles/rebuild_cache.dir
